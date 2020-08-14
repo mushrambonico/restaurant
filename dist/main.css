@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#content {
+    background-color: black;
+    color: gainsboro;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+}
+
+#main-header {
+    text-align: center;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    margin: 0 auto;
+}
+
+nav div {
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+#img-container {
+    background-image: url("https://i1.wp.com/blog.slicelife.com/wp-content/uploads/2018/11/466204117-compressor.jpg?w=1400&ssl=1");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+    width: 100%;
+}
+
+#about {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#content-wrapper {
+    width: 80%;
+    margin: 25px auto;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.flex-row div {
+    padding: 10px;
+    border: 1px solid white;
+}
+
+.regular-div-margin {
+    margin: 25px 0;
+}
+
+.clicked-btn {
+    color: red;
+    border-bottom: 1px solid red;
+    padding-bottom: 5px;
+    font-size: 18px;
+}
+
+p {
+    margin-bottom: 15px;
+}
