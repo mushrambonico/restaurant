@@ -34,6 +34,12 @@ export default function render() {
     content.append(header, nav);
     // render 'home tab (about)'
     renderAboutTab();
+    // create 'n render default footer
+    const footer = document.createElement('footer');
+    footer.id = 'main-footer';
+    footer.innerText = `Order Now! Call us at +1 382 7893` +
+                    ` \n\n Stuffed Pizza House, all rights reserved.`;
+    content.parentNode.append(footer);
     // log to assure everything is executed till this point
     console.log('page-rendered');
 }

@@ -1,12 +1,7 @@
-import { removeClickedBtn, toggleClickedBtn, cleanContent } from './helperFunctions';
+import { changeClickedTab } from './helperFunctions';
 
 export default function renderArea(event) {
-    const content = document.getElementById('content');
-    removeClickedBtn(); // remove 'clicked-btn' class from all btns
-    // make menu btn appear 'clicked'
-    toggleClickedBtn(event);
-    // remove all childs from content (clean DOM) except from header and nav-bar
-    cleanContent();
+    const content = changeClickedTab(event);
     //
     const contentWrapper = document.createElement('div');
     contentWrapper.id = 'content-wrapper';

@@ -1,12 +1,16 @@
-import { removeClickedBtn, toggleClickedBtn, cleanContent } from './helperFunctions';
+import { changeClickedTab } from './helperFunctions';
 
 function renderAboutTab() {
     const content = document.getElementById('content');
-    // creating img-container
+    // creating img-container and childs
     const imgContainer = document.createElement('div');
-    // changing img-container props
+    const imgText = document.createElement('div');
+    imgText.innerText = `It's almost a pie, but just a bit... \n better.`;
+    // changing img-container and childs props
     imgContainer.id = 'img-container';
     imgContainer.classList.toggle('regular-div-margin');
+    imgText.id = 'img-text';
+    imgContainer.append(imgText);
     // creating about container and childs
     const about = document.createElement('div');
     const paragraph = document.createElement('p');
@@ -30,12 +34,7 @@ function renderAboutTab() {
 }
 
 function renderAbout(event) {
-    const content = document.getElementById('content');
-    removeClickedBtn(); // remove 'clicked-btn' class from all btns
-    // make menu btn appear 'clicked'
-    toggleClickedBtn(event);
-    // remove all childs from content (clean DOM) except from header and nav-bar
-    cleanContent();
+    const content = changeClickedTab(event);
     renderAboutTab();
 }
 
